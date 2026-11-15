@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ff2442" />
+      <stop offset="100%" stop-color="#ff5c77" />
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#000" flood-opacity="0.22" />
+    </filter>
+  </defs>
+  <rect width="512" height="512" rx="115" fill="url(#bgGrad)" />
+  <!-- 后层书页 -->
+  <rect x="136" y="96" width="260" height="330" rx="24" fill="rgba(255,255,255,0.35)" transform="rotate(6 266 261)" />
+  <!-- 中层书页 -->
+  <rect x="122" y="102" width="260" height="330" rx="24" fill="rgba(255,255,255,0.65)" transform="rotate(2 252 267)" />
+  <!-- 前层主书页 -->
+  <g filter="url(#shadow)">
+    <path d="M108 110 H318 L372 164 V408 A22 22 0 0 1 350 430 H108 A22 22 0 0 1 86 408 V132 A22 22 0 0 1 108 110 Z" fill="#ffffff" />
+    <!-- 折角翻页效果 -->
+    <path d="M318 110 V148 A16 16 0 0 0 334 164 H372 Z" fill="#ffd6dc" />
+  </g>
+  <!-- 页面内容装饰线与图片框 -->
+  <rect x="122" y="152" width="160" height="26" rx="13" fill="#ff2442" />
+  <rect x="122" y="204" width="212" height="116" rx="14" fill="#fff0f2" stroke="#ffccd5" stroke-width="4" />
+  <circle cx="168" cy="244" r="16" fill="#ff2442" />
+  <path d="M136 304 L188 256 L228 292 L266 262 L318 304 Z" fill="#ff5c77" />
+  <rect x="122" y="344" width="212" height="16" rx="8" fill="#e2e8f0" />
+  <rect x="122" y="376" width="148" height="16" rx="8" fill="#cbd5e1" />
+</svg>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.xhs.pageextractor"
+    android:versionCode="1"
+    android:versionName="1.0.0">
+
+    <uses-sdk android:minSdkVersion="24" android:targetSdkVersion="34" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_MEDIA_VIDEO" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" android:maxSdkVersion="32" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" android:maxSdkVersion="29" />
+
+    <application
+        android:allowBackup="true"
+        android:label="翻页扒图助手"
+        android:usesCleartextTraffic="true"
+        android:hardwareAccelerated="true"
+        android:theme="@android:style/Theme.DeviceDefault.Light.NoActionBar">
+
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:launchMode="singleTask"
+            android:configChanges="orientation|screenSize|keyboardHidden">
+
+            <!-- 桌面图标启动 -->
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+            <!-- 接收来自小红书 App「分享 -> 更多」发来的链接或口令文本 -->
+            <intent-filter android:label="用翻页扒图助手提取图片">
+                <action android:name="android.intent.action.SEND" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:mimeType="text/plain" />
+            </intent-filter>
+
+            <!-- 接收来自手机相册/录屏「分享」发来的视频文件 -->
+            <intent-filter android:label="用翻页扒图助手逐页扒图">
+                <action android:name="android.intent.action.SEND" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:mimeType="video/*" />
+            </intent-filter>
+        </activity>
+    </application>
+</manifest>

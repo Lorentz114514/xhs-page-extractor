@@ -1,0 +1,28 @@
+{
+  "name": "小红书翻页视频扒图助手",
+  "short_name": "翻页扒图",
+  "description": "自动跳过翻书/滑页转场动画，精准提取小红书翻页视频每一页高清静态图",
+  "start_url": "./index.html?source=pwa",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#f6f7fb",
+  "theme_color": "#ff2442",
+  "icons": [
+    {
+      "src": "./icon.svg",
+      "sizes": "192x192 512x512",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "share_target": {
+    "action": "./index.html",
+    "method": "GET",
+    "enctype": "application/x-www-form-urlencoded",
+    "params": {
+      "title": "title",
+      "text": "text",
+      "url": "url"
+    }
+  }
+}
